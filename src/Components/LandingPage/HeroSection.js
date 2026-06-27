@@ -7,7 +7,17 @@ import flag from "../../Assets/flag.png";
 import roadImg from "../../Assets/home.jpg";
 import news1 from "../../Assets/Logo.jpg";
 
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
+import {
+  FaRegEdit,
+  FaFacebookF,
+  FaInstagram,
+  FaHospital,
+  FaYoutube,
+  FaTwitter,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaClipboardList,
+} from "react-icons/fa";
 
 import {
   MdEngineering,
@@ -19,29 +29,34 @@ import {
 function HeroSection() {
   const services = [
     {
-      icon: "📝",
+      icon: <FaRegEdit />,
       title: "Submit Grievance",
       sub: "Lodge your complaint",
+      color: "#2563eb",
     },
     {
-      icon: "🏥",
+      icon: <FaHospital />,
       title: "Apply for CMRF",
       sub: "Medical financial help",
+      color: "#16a34a",
     },
     {
-      icon: "📅",
+      icon: <FaCalendarAlt />,
       title: "Book Appointment",
       sub: "Meet your leader",
+      color: "#0ea5e9",
     },
     {
-      icon: "📍",
+      icon: <FaMapMarkerAlt />,
       title: "Find My Booth",
       sub: "Know your booth",
+      color: "#f97316",
     },
     {
-      icon: "📋",
+      icon: <FaClipboardList />,
       title: "Survey & Feedback",
       sub: "Share your opinion",
+      color: "#7c3aed",
     },
   ];
 
@@ -230,7 +245,15 @@ function HeroSection() {
         <div className="service-grid">
           {services.map((item, index) => (
             <div className="service-card" key={index}>
-              <div className="service-icon">{item.icon}</div>
+              <div
+                className="service-icon"
+                style={{
+                  backgroundColor: item.color,
+                  color: "#fff",
+                }}
+              >
+                {item.icon}
+              </div>
 
               <h5>{item.title}</h5>
 
