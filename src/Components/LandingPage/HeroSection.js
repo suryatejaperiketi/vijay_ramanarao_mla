@@ -190,9 +190,10 @@ function HeroSection() {
             <img src={flag} alt="India Flag" className="flag" />
 
             <div className="profile-card">
-              <h3>Inturi Nageswara Rao</h3>
+              <h3>Chinthakunta Vijaya Ramana Rao
+                 </h3>
 
-              <span>Kandukur Constituency</span>
+              <span>Peddapalli Constituency</span>
 
               <h2>MLA Candidate</h2>
 
